@@ -4,6 +4,13 @@ Real time speech recognition translator using wav2vec2
 
 download from [chrome web store](https://chrome.google.com/webstore/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc?hl=en)   
   
+  
+# Result    
+![result](doc/screenshot_1.png)    
+![result](doc/screenshot_2.png)    
+
+# Trained model detail
+Test WER on Common Voice Japanese: 22.082063
 
 Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese using
 - [common_voice](https://huggingface.co/datasets/common_voice)     
@@ -12,12 +19,6 @@ Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese using
 - [TEDxJP-10K](https://github.com/laboroai/TEDxJP-10K)     
 - [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
   
-  
-# Result    
-![result](doc/screenshot_1.png)    
-![result](doc/screenshot_2.png)    
-
-
 # Required environment to run   
 
 ```python

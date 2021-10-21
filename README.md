@@ -1,4 +1,4 @@
-# wav2vec2-live-japanese-speech-translator
+# wav2vec2-live-japanese-translator
 Real time speech recognition translator using wav2vec2
 
 

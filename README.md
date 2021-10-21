@@ -18,19 +18,21 @@ download from [chrome web store](https://chrome.google.com/webstore/detail/mouse
 
 
 # Required environment to run   
-conda create -n torch python=3.6 
-conda activate torch  
-conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
-pip install datasets==1.11.0
-pip install transformers==4.11.2
-pip install ipywidgets
-pip install jiwer
-pip install pykakasi
-pip install mecab-python3
-pip install unidic-lite
-pip install torchaudio==0.9.0
-pip install soundfile
 
+```python
+conda create -n torch python=3.6   
+conda activate torch    
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia  
+pip install datasets==1.11.0  
+pip install transformers==4.11.2  
+pip install ipywidgets  
+pip install jiwer  
+pip install pykakasi  
+pip install mecab-python3  
+pip install unidic-lite  
+pip install torchaudio==0.9.0  
+pip install soundfile  
+```
 
 
 # Run gui 

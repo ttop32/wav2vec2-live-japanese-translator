@@ -81,3 +81,4 @@ pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-m
 - [Window resize](https://stackoverflow.com/questions/62807295/how-to-resize-a-window-from-the-edges-after-adding-the-property-qtcore-qt-framel)
 - [QThread](https://wikidocs.net/87141)
 - [googletrans](https://github.com/ssut/py-googletrans)
+- [tqdm427_error](https://www.reddit.com/r/learnpython/comments/npvyd5/no_package_meta_data_for_tqdm427_error_while/)

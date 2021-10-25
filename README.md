@@ -60,3 +60,8 @@ python gui.py
 - [mecab-python3](https://github.com/SamuraiT/mecab-python3)
 - [wav2vec2-live](https://github.com/oliverguhr/wav2vec2-live)     
 - [pyaudio_portaudio](https://github.com/intxcc/pyaudio_portaudio)     
+- [pororo - wav2vec2](https://github.com/kakaobrain/pororo/blob/7d05a75e8062b00e6b65364b8ec6c52b6293ab07/pororo/models/wav2vec2/recognizer.py)
+- [DeepSpeech-examples](https://github.com/mozilla/DeepSpeech-examples/blob/r0.9/mic_vad_streaming/mic_vad_streaming.py)
+- [Hide the title bar](https://clay-atlas.com/us/blog/2021/03/04/pyqt5-cn-hide-title-bar-move-interface/)
+- [Window resize](https://stackoverflow.com/questions/62807295/how-to-resize-a-window-from-the-edges-after-adding-the-property-qtcore-qt-framel)
+- [QThread](https://wikidocs.net/87141)

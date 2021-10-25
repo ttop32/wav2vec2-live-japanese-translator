@@ -20,7 +20,6 @@ Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese using
 - [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
   
 # Required environment to run   
-
 ```python
 conda create -n torch python=3.6   
 conda activate torch    
@@ -42,8 +41,16 @@ pip install pyinstaller
 ```
 
 
-# Run gui 
-python gui.py
+# Run gui using python
+```python
+python gui_handler.py
+```
+
+# pyinstaller
+```python
+pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-metadata torch --copy-metadata tqdm --copy-metadata regex --copy-metadata sacremoses --copy-metadata requests --copy-metadata packaging --copy-metadata filelock --copy-metadata numpy --copy-metadata tokenizers --copy-metadata importlib_metadata  --copy-metadata dataclasses
+```
+
 
 
 

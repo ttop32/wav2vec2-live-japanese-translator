@@ -31,9 +31,14 @@ pip install ipywidgets
 pip install jiwer  
 pip install pykakasi  
 pip install mecab-python3  
-pip install unidic-lite  
+pip install unidic-lite
+
 pip install torchaudio==0.9.0  
 pip install soundfile  
+pip install googletrans==4.0.0rc1
+pip install PyQt5
+pip install scipy
+pip install pyinstaller
 ```
 
 

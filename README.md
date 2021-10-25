@@ -13,7 +13,7 @@ download from [chrome web store](https://chrome.google.com/webstore/detail/mouse
 Test WER on Common Voice Japanese: 22.08%   
 Test CER on Common Voice Japanese: 10.08%   
 
-Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese using
+Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese hiragana using
 - [common_voice](https://huggingface.co/datasets/common_voice)     
 - [JSUT](https://sites.google.com/site/shinnosuketakamichi/publication/jsut)     
 - [CSS10](https://github.com/Kyubyong/css10)     

@@ -31,7 +31,7 @@ pip install jiwer
 pip install pykakasi  
 pip install mecab-python3  
 pip install unidic-lite
-
+#gui
 pip install torchaudio==0.9.0  
 pip install soundfile  
 pip install googletrans==4.0.0rc1
@@ -77,3 +77,4 @@ pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-m
 - [Hide the title bar](https://clay-atlas.com/us/blog/2021/03/04/pyqt5-cn-hide-title-bar-move-interface/)
 - [Window resize](https://stackoverflow.com/questions/62807295/how-to-resize-a-window-from-the-edges-after-adding-the-property-qtcore-qt-framel)
 - [QThread](https://wikidocs.net/87141)
+- [googletrans](https://github.com/ssut/py-googletrans)

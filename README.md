@@ -31,6 +31,7 @@ pip install jiwer
 pip install pykakasi  
 pip install mecab-python3  
 pip install unidic-lite
+
 #gui
 pip install torchaudio==0.9.0  
 pip install soundfile  

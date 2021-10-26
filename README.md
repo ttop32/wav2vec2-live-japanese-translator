@@ -10,8 +10,8 @@ download latest from [link](https://github.com/ttop32/wav2vec2-live-japanese-tra
 ![result](doc/screenshot_2.png)    
 
 # Trained model detail
-Test WER on Common Voice Japanese: 22.08%   
-Test CER on Common Voice Japanese: 10.08%   
+Test WER on Common Voice Japanese test data: 22.08%   
+Test CER on Common Voice Japanese test data: 10.08%   
 
 Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese hiragana using
 - [common_voice](https://huggingface.co/datasets/common_voice)     

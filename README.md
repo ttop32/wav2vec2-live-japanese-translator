@@ -2,7 +2,7 @@
 Real time speech recognition translator using wav2vec2
 
 
-download from [chrome web store](https://chrome.google.com/webstore/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc?hl=en)   
+download latest from [link](https://github.com/ttop32/wav2vec2-live-japanese-translator/releases/download/0.0.1/wav2vec2_live_japanese_translator.zip)   
   
   
 # Result    

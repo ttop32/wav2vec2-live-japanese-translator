@@ -58,6 +58,11 @@ pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-m
 
 
 # Acknowledgement and References  
+- [wav2vec 2.0](https://arxiv.org/abs/2006.11477)
+- [nlp bookmark](https://github.com/hyunjun/bookmarks/blob/master/nlp.md)
+- [wav2vec2.0 review1](https://ratsgo.github.io/speechbook/docs/neuralfe/wav2vec)
+- [wav2vec2.0 review2](https://kaen2891.tistory.com/83)
+- [asr base](https://lynnshin.tistory.com/42)
 - [fine-tune-xlsr-wav2vec2](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)
 - [fine-tune-xlsr-wav2vec2-colab](https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_Tune_XLSR_Wav2Vec2_on_Turkish_ASR_with_%F0%9F%A4%97_Transformers.ipynb)
 - [wav2vec_japanese](https://colab.research.google.com/github/yuji-matsunami/wav2vec_japanese/blob/main/wav2vec_ja.ipynb)
@@ -71,6 +76,7 @@ pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-m
 - [CSS10](https://github.com/Kyubyong/css10)     
 - [TEDxJP-10K](https://github.com/laboroai/TEDxJP-10K)     
 - [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
+- [speech-japanese-korean-vietnamese](http://www.hieuthi.com/blog/2018/04/22/speech-japanese-korean-vietnamese.html)
 - [Pykakasi](https://github.com/miurahr/pykakasi)
 - [mecab-python3](https://github.com/SamuraiT/mecab-python3)
 - [wav2vec2-live](https://github.com/oliverguhr/wav2vec2-live)     
@@ -82,3 +88,4 @@ pyinstaller gui_handler.py --hidden-import=pytorch --collect-data torch --copy-m
 - [QThread](https://wikidocs.net/87141)
 - [googletrans](https://github.com/ssut/py-googletrans)
 - [tqdm427_error](https://www.reddit.com/r/learnpython/comments/npvyd5/no_package_meta_data_for_tqdm427_error_while/)
+

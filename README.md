@@ -1,5 +1,5 @@
 # wav2vec2-live-japanese-translator
-Real time speech recognition translator using wav2vec2
+Real time speech recognition translator using wav2vec2 and google translate
 
 [![Downloads](https://img.shields.io/github/downloads/ttop32/wav2vec2-live-japanese-translator/total.svg "Downloads")](https://github.com/ttop32/wav2vec2-live-japanese-translator/releases) 
 

@@ -45,6 +45,8 @@ pip install scipy
 pip install pyinstaller
 ```
 
+# Model trained code
+jp_train.ipynb  
 
 # Run gui using python
 ```python

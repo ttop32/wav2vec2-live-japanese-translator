@@ -44,6 +44,14 @@ class LiveWav2Vec2():
         self.vad_process.start()
 
 
+    def changeModelProcess(self,model_name,useCuda=False):
+        self.asr_process.terminate()
+        self.asr_process  = Process(target=LiveWav2Vec2.asr_process, args=(
+                model_name, useCuda, self.asr_input_queue, self.asr_output_queue,))
+        self.asr_process.daemon=True
+        self.asr_process.start()
+
+
 
 
 
@@ -63,15 +71,18 @@ class LiveWav2Vec2():
         return [deviceIdDict,deviceNameDict]
 
     def getDefaultDeviceId(self,):
+        if len(self.deviceIdDict)==0:
+            return -1
+
         try:
-            default_device_index = audio.get_default_input_device_info()
+            default_device_index = audio.get_default_input_device_info()["index"]
         except IOError:
             default_device_index = -1
+
         #if default device is not in available device list, choose from available list
         if default_device_index not in list(self.deviceIdDict.keys()):
             default_device_index=list(self.deviceIdDict.keys())[0]
-        else:
-            default_device_index=-1
+
         return default_device_index
 
 
@@ -231,10 +242,7 @@ if __name__ == "__main__":
     print(asr.deviceIdDict)
     print(deviceId)
     deviceId = int(input("Choose device [" +   str(deviceId) +   "]: ") or deviceId)
-
     print(asr.deviceIdDict[deviceId])
-
-
     asr.start("wav2vec2_large_xlsr_japanese_hiragana",deviceId,useCuda=False)
 
     while True:

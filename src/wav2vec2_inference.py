@@ -10,8 +10,8 @@ from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
 class Wave2Vec2Inference():
     def __init__(self,model_name,useCuda=False):
-        self.processor = Wav2Vec2Processor.from_pretrained(model_name)
-        self.model = Wav2Vec2ForCTC.from_pretrained(model_name)
+        self.processor = Wav2Vec2Processor.from_pretrained(model_name,cache_dir="model")
+        self.model = Wav2Vec2ForCTC.from_pretrained(model_name,cache_dir="model")
 
         if useCuda:
             self.model=self.model.to("cuda")
@@ -24,7 +24,7 @@ class Wave2Vec2Inference():
         inputs = self.processor([audio_buffer], sampling_rate=16_000, return_tensors="pt", padding=True)
         input_values=inputs.input_values
         attention_mask=inputs.attention_mask
-        
+
         if self.useCuda:
             input_values=inputs.input_values.to("cuda")
             attention_mask=inputs.attention_mask.to("cuda")

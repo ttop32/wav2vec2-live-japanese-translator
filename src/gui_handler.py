@@ -12,11 +12,11 @@ import threading
 
 
 class GuiHandler:
-    def __init__(self,modelName,useCuda):
+    def __init__(self,useCuda):
         self.window=MainWindow()
         self.asr= LiveWav2Vec2()
-        self.modelName=modelName
         self.window.setText("loading...")
+        self.useCuda=useCuda
 
         #no device
         defaultDevice=self.asr.getDefaultDeviceId()
@@ -28,10 +28,15 @@ class GuiHandler:
         #load setting
         self.setting=SettingHandler({
             "lang":"Korean",
-            "device":self.asr.deviceIdDict[defaultDevice]
+            "device":self.asr.deviceIdDict[defaultDevice],
+            "model":"wav2vec2_large_xlsr_japanese_hiragana"
         })
         self.setting.selectionListAll["lang"]=TranslateHandler.langCodeDict  #put dict for check conflict when load setting
         self.setting.selectionListAll["device"]=self.asr.deviceNameDict
+        self.setting.selectionListAll["model"]={
+            "wav2vec2_large_xlsr_japanese_hiragana":"wav2vec2_large_xlsr_japanese_hiragana",
+            "facebook/wav2vec2-large-960h-lv60-self":"facebook/wav2vec2-large-960h-lv60-self"
+        }
         self.currentSetting=self.setting.loadSetting()
         self.setting.saveSetting(self.currentSetting)
         print("current Setting=============")
@@ -41,10 +46,11 @@ class GuiHandler:
         #setup combobox
         self.window.setupComboBox(self.window.cb1,self.asr.deviceNameDict,self.currentSetting["device"],self.changeDevice)
         self.window.setupComboBox(self.window.cb2,TranslateHandler.langCodeDict,self.currentSetting["lang"],self.changeLang)
+        self.window.setupComboBox(self.window.cb3,self.setting.selectionListAll["model"],self.currentSetting["model"],self.changeModel)
 
         #start asr model
         deviceId=self.setting.selectionListAll["device"][self.currentSetting["device"]]
-        self.asr.start(self.modelName,deviceId,useCuda)
+        self.asr.start(self.currentSetting["model"],deviceId,self.useCuda)
 
         # thread for data consumer
         lang=self.setting.selectionListAll["lang"][self.currentSetting["lang"]]
@@ -52,19 +58,35 @@ class GuiHandler:
         self.asrOutputHandler.outputSignal.connect(self.window.setTextAppend)
         self.asrOutputHandler.start()
 
-    def changeDevice(self,text):
-        print("changDevice"+str(text))
-        self.currentSetting["device"]=text
-        self.setting.saveSetting(self.currentSetting)
-        device=self.setting.selectionListAll["device"][self.currentSetting["device"]]
+
+
+
+
+
+
+
+    def changeLang(self,selectedName):
+        lang=self.saveSettingAndGetVal("lang",selectedName)
+        self.asrOutputHandler.setLang(lang)
+
+    def changeDevice(self,selectedName):
+        device=self.saveSettingAndGetVal("device",selectedName)
         self.asr.changeDevice(device)
 
-    def changeLang(self,text):
-        print("changLang"+str(text))
-        self.currentSetting["lang"]=text
+    def changeModel(self,selectedName):
+        modelName=self.saveSettingAndGetVal("model",selectedName)
+        self.window.setText("loading...")
+        self.asr.changeModelProcess(modelName,self.useCuda)
+
+
+    def saveSettingAndGetVal(self,settingType,selectedName):
+        print("change "+settingType+str(selectedName))
+        self.currentSetting[settingType]=selectedName
         self.setting.saveSetting(self.currentSetting)
-        lang=self.setting.selectionListAll["lang"][self.currentSetting["lang"]]
-        self.asrOutputHandler.setLang(lang)
+        settingVal=self.setting.selectionListAll[settingType][self.currentSetting[settingType]]
+        return settingVal
+
+
 
 
 
@@ -95,7 +117,7 @@ class AsrOutputHandler(QThread):
             text,sample_length,inference_time = self.output_queue.get()
             print(f"{sample_length:.3f}s\t{inference_time:.3f}s\t{text}")
 
-            text=TranslateHandler.translate(text,tolang=self.getLang(),fromlang="ja")
+            text=TranslateHandler.translate(text,tolang=self.getLang(),fromlang="auto")
             print(text)
             self.outputSignal.emit(text)
 
@@ -103,7 +125,8 @@ class AsrOutputHandler(QThread):
 if __name__ == '__main__':
     multiprocessing.freeze_support()
     app = QApplication(sys.argv)
-    guiHandler = GuiHandler(modelName="wav2vec2_large_xlsr_japanese_hiragana",useCuda=False)
+    # useCuda = True if torch.cuda.is_available() else False
+    guiHandler = GuiHandler(useCuda=False)
     guiHandler.window.show()
     sys.exit(app.exec_())
 

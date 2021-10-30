@@ -25,7 +25,7 @@ Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese hiragana using
 ```python
 conda create -n torch python=3.6   
 conda activate torch    
-conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia  
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia -c conda-forge
 pip install datasets==1.11.0  
 pip install transformers==4.11.2  
 pip install ipywidgets  

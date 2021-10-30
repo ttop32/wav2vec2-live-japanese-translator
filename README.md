@@ -47,7 +47,7 @@ pip install scipy
 pip install pyinstaller
 ```
 
-# Model train code
+# Model finetune code
 jp_train.ipynb  
 
 # Run gui using python

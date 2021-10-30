@@ -10,7 +10,7 @@ download latest from [![Downloads](https://img.shields.io/github/downloads/ttop3
 ![result](doc/screenshot_1.png)    
 ![result](doc/screenshot_2.png)    
 
-# Trained model detail
+# Finetuned model detail
 Test WER on Common Voice Japanese test data: 22.08%   
 Test CER on Common Voice Japanese test data: 10.08%   
 

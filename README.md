@@ -94,4 +94,6 @@ pyinstaller gui_handler.py -y -n wav2vec2_live_japanese_translator --hidden-impo
 - [QThread](https://wikidocs.net/87141)
 - [googletrans](https://github.com/ssut/py-googletrans)
 - [tqdm427_error](https://www.reddit.com/r/learnpython/comments/npvyd5/no_package_meta_data_for_tqdm427_error_while/)
-
+- [hulk89_ctc](https://hulk89.github.io/machine%20learning/2018/01/30/ctc/)
+- [ratsgo_ctc](https://ratsgo.github.io/speechbook/docs/neuralam/ctc)
+- 

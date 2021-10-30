@@ -39,6 +39,7 @@ conda install pytorch==1.9.0 torchaudio==0.9.0 cudatoolkit=10.2 -c pytorch
 pip install transformers==4.11.2  
 pip install PySoundFile
 pip install PyAudio-0.2.11-cp36-cp36m-win_amd64.whl
+pip install webrtcvad
 pip install googletrans==4.0.0rc1
 pip install PyQt5
 pip install scipy

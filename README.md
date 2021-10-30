@@ -37,7 +37,7 @@ pip install unidic-lite
 #gui
 pip install torchaudio==0.9.0  
 pip install transformers==4.11.2  
-pip install soundfile  
+pip install PySoundFile
 pip install PyAudio-0.2.11-cp36-cp36m-win_amd64.whl
 pip install googletrans==4.0.0rc1
 pip install PyQt5

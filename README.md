@@ -1,7 +1,7 @@
 # wav2vec2-live-japanese-translator
 Real time speech recognition translator using wav2vec2 and google translate    
 uses finetuned facebook/wav2vec2-large-xlsr-53 and facebook/wav2vec2-large-960h-lv60-self  
-it detect speakr (WASAPI for output loopback) and microphone (MME)
+it detect speaker (WASAPI for output loopback) and microphone (MME)
 
 download latest from [![Downloads](https://img.shields.io/github/downloads/ttop32/wav2vec2-live-japanese-translator/total.svg "Downloads")](https://github.com/ttop32/wav2vec2-live-japanese-translator/releases/latest) 
 

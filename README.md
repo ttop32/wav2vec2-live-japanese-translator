@@ -11,9 +11,10 @@ download latest from [![Downloads](https://img.shields.io/github/downloads/ttop3
 ![result](doc/screenshot_1.png)    
 ![result](doc/screenshot_2.png)    
 
+
 # Finetuned model detail
-Test WER on Common Voice Japanese test data: 22.08%   
-Test CER on Common Voice Japanese test data: 10.08%   
+Test WER on Common Voice Japanese test data: 21.48%    
+Test CER on Common Voice Japanese test data: 9.82%  
 
 Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese hiragana using
 - [common_voice](https://huggingface.co/datasets/common_voice)     
@@ -21,7 +22,8 @@ Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese hiragana using
 - [CSS10](https://github.com/Kyubyong/css10)     
 - [TEDxJP-10K](https://github.com/laboroai/TEDxJP-10K)     
 - [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
-  
+- [JSSS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jsss_corpus)
+   
 # Required environment to run   
 ```python
 conda create -n torch python=3.6   
@@ -83,6 +85,7 @@ pyinstaller gui_handler.py -y -n wav2vec2_live_japanese_translator --hidden-impo
 - [CSS10](https://github.com/Kyubyong/css10)     
 - [TEDxJP-10K](https://github.com/laboroai/TEDxJP-10K)     
 - [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
+- [JSSS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jsss_corpus)
 - [speech-japanese-korean-vietnamese](http://www.hieuthi.com/blog/2018/04/22/speech-japanese-korean-vietnamese.html)
 - [Pykakasi](https://github.com/miurahr/pykakasi)
 - [mecab-python3](https://github.com/SamuraiT/mecab-python3)

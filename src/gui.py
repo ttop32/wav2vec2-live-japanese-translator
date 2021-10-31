@@ -2,20 +2,6 @@
 # https://stackoverflow.com/questions/62807295/how-to-resize-a-window-from-the-edges-after-adding-the-property-qtcore-qt-framel
 
 
-import sys
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-
-
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.moveFlag = False
-        self.initUI()
-# https://clay-atlas.com/us/blog/2021/03/04/pyqt5-cn-hide-title-bar-move-interface/
-# https://stackoverflow.com/questions/62807295/how-to-resize-a-window-from-the-edges-after-adding-the-property-qtcore-qt-framel
-
 
 import sys
 from PyQt5.QtWidgets import *

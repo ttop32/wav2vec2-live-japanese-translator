@@ -243,7 +243,7 @@ if __name__ == "__main__":
     print(deviceId)
     deviceId = int(input("Choose device [" +   str(deviceId) +   "]: ") or deviceId)
     print(asr.deviceIdDict[deviceId])
-    asr.start("wav2vec2_large_xlsr_japanese_hiragana",deviceId,useCuda=False)
+    asr.start("wav2vec2_large_xlsr_japanese_hiragana_1028",deviceId,useCuda=False)
 
     while True:
         text,sample_length,inference_time = asr.asr_output_queue.get()

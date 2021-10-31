@@ -29,12 +29,12 @@ class GuiHandler:
         self.setting=SettingHandler({
             "lang":"Korean",
             "device":self.asr.deviceIdDict[defaultDevice],
-            "model":"wav2vec2_large_xlsr_japanese_hiragana"
+            "model":"wav2vec2_large_xlsr_japanese_hiragana_1028"
         })
         self.setting.selectionListAll["lang"]=TranslateHandler.langCodeDict  #put dict for check conflict when load setting
         self.setting.selectionListAll["device"]=self.asr.deviceNameDict
         self.setting.selectionListAll["model"]={
-            "wav2vec2_large_xlsr_japanese_hiragana":"wav2vec2_large_xlsr_japanese_hiragana",
+            "wav2vec2_large_xlsr_japanese_hiragana_1028":"wav2vec2_large_xlsr_japanese_hiragana_1028",
             "facebook/wav2vec2-large-960h-lv60-self":"facebook/wav2vec2-large-960h-lv60-self"
         }
         self.currentSetting=self.setting.loadSetting()

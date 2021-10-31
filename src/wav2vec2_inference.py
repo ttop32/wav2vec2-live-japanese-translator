@@ -1,4 +1,4 @@
- # https://github.com/oliverguhr/wav2vec2-live/blob/main/live_vad_asr.py
+# https://github.com/oliverguhr/wav2vec2-live/blob/main/live_vad_asr.py
 # https://github.com/oliverguhr/wav2vec2-live
 
 
@@ -45,6 +45,6 @@ class Wave2Vec2Inference():
 
 if __name__ == "__main__":
     print("Model test")
-    asr = Wave2Vec2Inference("wav2vec2_large_xlsr_japanese_hiragana",useCuda=False)
+    asr = Wave2Vec2Inference("wav2vec2_large_xlsr_japanese_hiragana_1028",useCuda=False)
     text = asr.file_to_text("test.wav")
     print(text)
